@@ -8,6 +8,15 @@
 
                 <div class="col-lg-6">
                     <div class="card">
+                         @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    @endif
                         <div class="card-header">
                             <strong>Basic Form</strong> Elements
                         </div>
@@ -187,12 +196,32 @@
                     <th>Add Case</th>
                     <th>Edit</th>
                     <th>Delete</th>
-
+                    
 
                 </tr>
             </thead>
             <tbody>
-                
+                 @foreach($citi as $cit)
+                                            <tr>
+                                                <td> {{$cit['id']}}</td>
+                                                <td> {{$cit['n_id']}}</td>
+                                                <td> {{$cit['nationality']}}</td>
+                                                <td> {{$cit['first_name']}}</td>
+                                                <td> {{$cit['sec_name']}}</td>
+                                                <td> {{$cit['third_name']}}</td>
+                                                <td> {{$cit['last_name']}}</td>
+                                                <td> {{$cit['city']}}</td>
+                                                <td> {{$cit['address']}}</td>
+                                                <td> {{$cit['mobile_number']}}</td>
+                                                <td> {{$cit['gender']}}</td>
+                                                <td> {{$cit['password']}}</td>
+                                                <td> Edit </td>
+                                                <td> Delete</td>
+
+
+
+                                            </tr>
+                                            @endforeach
 
             </tbody>
         </table>
