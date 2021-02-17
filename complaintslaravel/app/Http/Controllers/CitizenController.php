@@ -35,22 +35,24 @@ class CitizenController extends Controller
 
     	]);
 
-    	$cit=new Citizen();
-    	$cit->n_id        =$request->n_id;
-    	$cit->nationality =$request->nationality;
-    	$cit->first_name  =$request->first_name;
-    	$cit->sec_name    =$request->sec_name;
-    	$cit->third_name  =$request->third_name;
-    	$cit->last_name   =$request->last_name;
-    	$cit->city        =$request->city;
-    	$cit->address     =$request->address;
-    	//$cit->mobile_number =$request->mobile_number;
-    	$cit->gender      =$request->gender;
-    	$cit->password    =$request->password;
-    	
-    	$cit->save();
+        $cit=new Citizen();
+        $cit->n_id        =$request->n_id;
+        $cit->nationality =$request->nationality;
+        $cit->first_name  =$request->first_name;
+        $cit->sec_name    =$request->sec_name;
+        $cit->third_name  =$request->third_name;
+        $cit->last_name   =$request->last_name;
+        $cit->city        =$request->city;
+        $cit->address     =$request->address;
+        $cit->mobile_number =$request->mobile_number;
+        $cit->gender      =$request->gender;
+        $cit->password    =$request->password;
+        
+        $cit->save();
 
-    	return redirect('/manage_citizen');
+        return redirect('/manage_citizen');
+
+    
 
     	
     }

@@ -7,6 +7,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="card">
+                                    
                                     <div class="card-header" style="background-color: #EEEEEE">Manage Cases</div>
                                     <div class="card-body" style="background-color: #F0F0F0">
                                         <div class="card-title">
@@ -172,11 +173,30 @@
                                                 <th>Time</th>
                                                 <th>Edit</th>
                                                 <th>Delete</th>
-
-                                                
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($case1 as $case)
+                                            <tr>
+                                                <td> {{$case['id']}}</td>
+                                                <td> {{$case['case_priority']}}</td>
+                                                <td> {{$case['case_type']}}</td>
+                                                <td> {{$case['case_entry']}}</td>
+                                                <td> {{$case['case_status']}}</td>
+                                                <td> {{$case['directory_name']}}</td>
+                                                <td> {{$case['case_desc']}}</td>
+                                                <td> {{$case['case_emp_note']}}</td>
+                                                <td> {{$case['case_day']}}</td>
+                                                <td> {{$case['case_date']}}</td>
+                                                <td> {{$case['case_time']}}</td>
+                                                
+                                                <td> Edit </td>
+                                                <td> Delete</td>
+
+
+
+                                            </tr>
+                                            @endforeach
                                            
                                         
 

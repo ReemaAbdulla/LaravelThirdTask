@@ -193,7 +193,7 @@
                     <th>Mobile Number</th>
                     <th>Gender</th>
                     <th>Password</th>
-                    <th>Add Case</th>
+                   
                     <th>Edit</th>
                     <th>Delete</th>
                     
